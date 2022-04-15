@@ -11,17 +11,16 @@ db = SQLAlchemy()
 
 ##############################################################################
 # Part 1: Compose ORM
+class Human(db.Model):
+    """Human model."""
 
-# class Human(db.Model):
-#     """Human model."""
-
-#     __tablename__ = "humans"
+    __tablename__ = "humans"
 
 
-# class Animal(db.Model):
-#     """Animal model."""
+class Animal(db.Model):
+    """Animal model."""
 
-#     __tablename__ = "animals"
+    __tablename__ = "animals"
 
 
 # End Part 1
@@ -43,7 +42,7 @@ def connect_to_db(app):
     """Connect the database to our Flask app."""
 
     # Configure to use our database.
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://vbyobeqmycypci:d1eb2c04ccd37fb39870ca89fcd69f9608f41489da3f6df9161ac493dd71aa81@ec2-34-192-83-52.compute-1.amazonaws.com:5432/d5362spol15om4' # YOUR URI GOES HERE
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://vbyobeqmycypci:d1eb2c04ccd37fb39870ca89fcd69f9608f41489da3f6df9161ac493dd71aa81@ec2-34-192-83-52.compute-1.amazonaws.com:5432/d5362spol15om4'  # YOUR URI GOES HERE
     app.config['SQLALCHEMY_ECHO'] = False
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.app = app
