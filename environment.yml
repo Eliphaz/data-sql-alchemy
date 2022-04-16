@@ -1,0 +1,17 @@
+name: conda_sqlalchemy
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - xlrd
+  - blinker
+  - click
+  - Flask
+  - Flask-DebugToolbar
+  - Flask-SQLAlchemy
+  - itsdangerous
+  - Jinja2
+  - MarkupSafe
+  - psycopg2
+  - SQLAlchemy
+  - Werkzeug
